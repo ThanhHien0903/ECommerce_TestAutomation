@@ -36,10 +36,10 @@
 - Đăng ký
 - Đăng nhập
 - Đăng xuất
-- Quản lý sản phẩm, nhãn hiệu, danh mục:Kiểm tra các chức năng thêm, sửa, xóa
-- Thêm sản phẩm vào giỏ hàng:
-- Thanh toán (Checkout):
-- Tìm kiếm sản phẩm:
+- Quản lý sản phẩm, nhãn hiệu, danh mục: Kiểm tra các chức năng thêm, sửa, xóa
+- Thêm sản phẩm vào giỏ hàng
+- Thanh toán (Checkout)
+- Tìm kiếm sản phẩm
 
 #### Kiểm thử giao diện người dùng (UI Testing)
 
