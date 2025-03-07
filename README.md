@@ -3,7 +3,7 @@
 ## Hướng dẫn cài đặt
 
 - Cài đặt Python: https://www.python.org/
-  Kiểm tra xem đã cài thành công chưa:
+- Kiểm tra xem đã cài thành công chưa:
   `python --version`
 
 - Cài đặt PIP: Mở cửa sổ dòng lệnh và gõ dòng lệnh sau:
