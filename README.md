@@ -3,7 +3,7 @@
 ## Hướng dẫn cài đặt
 
 - Cài đặt Python: https://www.python.org/
-  Kiểm tra xem đã cài thành công chưa:
+- Kiểm tra xem đã cài thành công chưa:
   `python --version`
 
 - Cài đặt PIP: Mở cửa sổ dòng lệnh và gõ dòng lệnh sau:
@@ -36,10 +36,10 @@
 - Đăng ký
 - Đăng nhập
 - Đăng xuất
-- Quản lý sản phẩm, nhãn hiệu, danh mục:Kiểm tra các chức năng thêm, sửa, xóa
-- Thêm sản phẩm vào giỏ hàng:
-- Thanh toán (Checkout):
-- Tìm kiếm sản phẩm:
+- Quản lý sản phẩm, nhãn hiệu, danh mục: Kiểm tra các chức năng thêm, sửa, xóa
+- Thêm sản phẩm vào giỏ hàng
+- Thanh toán (Checkout)
+- Tìm kiếm sản phẩm
 
 #### Kiểm thử giao diện người dùng (UI Testing)
 
