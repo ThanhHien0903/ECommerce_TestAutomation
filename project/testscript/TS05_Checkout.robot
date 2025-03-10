@@ -21,7 +21,7 @@ TC_CHECKOUT_001: Checkout with Empty Cart
     Navigate to shopping cart page
     Verify Checkout Button Is Hidden
 TC_CHECKOUT_002: Checkout without Name
-    [Documentation]    Thanh toán với để trống trường Họ tên
+    [Documentation]    Thanh toán để trống trường Họ tên
     Navigate to Homepage
     Add Product to Cart                 ${PRODUCT_NAME}
     Verify Product in Cart              ${Message}

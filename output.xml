@@ -1,0 +1,1238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1 (Python 3.13.0 on win32)" generated="2025-03-08T09:20:56.171385" rpa="false" schemaversion="5">
+<suite id="s1" name="TS07 ProductManagement" source="c:\development\RobotFramework\Testing\project\testscript\TS07_ProductManagement.robot">
+<kw name="Run Keywords" owner="BuiltIn" type="SETUP">
+<kw name="Start Test" owner="keywords">
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Start Test</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-03-08T09:20:56.669149" elapsed="0.000337"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-03-08T09:20:56.670225" level="INFO">Opening browser 'chrome' to base url 'http://localhost:8080/laptopshop/'.</msg>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-03-08T09:20:56.669829" elapsed="25.231546"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-03-08T09:21:21.902087" elapsed="0.049215"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Web_Homepage_Logo}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-03-08T09:21:21.952904" elapsed="0.045807"/>
+</kw>
+<doc>[Description]
+[Author]
+[Date]</doc>
+<status status="PASS" start="2025-03-08T09:20:56.668833" elapsed="25.330896"/>
+</kw>
+<kw name="Login with Admin" owner="keywords">
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Login with Admin</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-03-08T09:21:22.002371" elapsed="0.002526"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-03-08T09:21:22.009747" level="INFO">Clicking element 'xpath=//a[@href='/laptopshop/login']'.</msg>
+<arg>${web_login_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-08T09:21:22.007813" elapsed="1.772758"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Web_Login_Title}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-03-08T09:21:23.781438" elapsed="0.065871"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-08T09:21:23.850133" level="INFO">Typing text 'admin@gmail.com' into text field 'xpath=//input[@name='email']'.</msg>
+<arg>${web_login_input_email}</arg>
+<arg>${admin_username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-08T09:21:23.848567" elapsed="0.254636"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-08T09:21:24.105848" level="INFO">Typing text '123456' into text field 'xpath=//input[@name='password']'.</msg>
+<arg>${Web_Login_Input_Password}</arg>
+<arg>${admin_password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-08T09:21:24.104335" elapsed="0.152842"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-03-08T09:21:24.259142" level="INFO">Clicking button 'xpath=//input[@id='submit']'.</msg>
+<arg>${Web_Login_Button_Submit}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-08T09:21:24.258081" elapsed="3.478288"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${web_admin_laptopshop}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-03-08T09:21:27.737453" elapsed="0.053496"/>
+</kw>
+<doc>[Description]
+[Author]
+[Date]</doc>
+<status status="PASS" start="2025-03-08T09:21:22.001089" elapsed="5.790641"/>
+</kw>
+<arg>Start Test</arg>
+<arg>AND</arg>
+<arg>Login with Admin</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<status status="PASS" start="2025-03-08T09:20:56.668296" elapsed="31.124066"/>
+</kw>
+<test id="s1-t1" name="TC01_Upload Product with Valid Data" line="19">
+<kw name="Navigate To Add Product Page" owner="keywords" type="SETUP">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-03-08T09:21:27.799142" level="INFO">Clicking element 'xpath=//a[@href='/laptopshop/admin/san-pham']'.</msg>
+<arg>${Web_AdminHomepage_Sanpham}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-08T09:21:27.797981" elapsed="0.308277"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Web_AddProduct_Title}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-03-08T09:21:28.107090" elapsed="0.045457"/>
+</kw>
+<status status="PASS" start="2025-03-08T09:21:27.796377" elapsed="0.356766"/>
+</kw>
+<kw name="Click &quot;Upload&quot; button">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-03-08T09:21:28.157119" level="INFO">Clicking element 'xpath=//select[@id='danhMucDropdown']'.</msg>
+<arg>${Web_AddProduct_Dropdown}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-08T09:21:28.156418" elapsed="0.242773"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-03-08T09:21:28.401339" level="INFO">Clicking element 'xpath=//option[text()='Laptop']'.</msg>
+<arg>${Web_AddProduct_Laptop_Option}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-08T09:21:28.400239" elapsed="0.113446"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Web_AddProduct_Popup}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-03-08T09:21:28.514760" elapsed="0.546382"/>
+</kw>
+<status status="PASS" start="2025-03-08T09:21:28.155462" elapsed="0.906263"/>
+</kw>
+<kw name="Upload Product Details">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-08T09:21:29.067491" level="INFO">Typing text 'Laptop Apple MacBook Air' into text field 'xpath=(//input[@name='tenSanPham'])[1]'.</msg>
+<arg>${Web_AddProduct_Name_Input}</arg>
+<arg>Laptop Apple MacBook Air</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-08T09:21:29.065623" elapsed="0.194481"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-08T09:21:29.262239" level="INFO">Typing text '21490000' into text field 'xpath=(//input[@name='donGia'])[1]'.</msg>
+<arg>${Web_AddProduct_Price_Input}</arg>
+<arg>21490000</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-08T09:21:29.261058" elapsed="0.168158"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-03-08T09:21:29.430921" level="INFO">Clicking element 'xpath=//select[@id='nhaSXId']'.</msg>
+<arg>${Web_AddProduct_HSX_Dropdown}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-08T09:21:29.430019" elapsed="0.158124"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-03-08T09:21:29.590259" level="INFO">Clicking element 'xpath=(//option[@value='2'])[4]'.</msg>
+<arg>${HangSanXuat}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-08T09:21:29.589291" elapsed="0.083184"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-08T09:21:29.674316" level="INFO">Typing text 'macOS' into text field 'xpath=//input[@name='heDieuHanh']'.</msg>
+<arg>${Web_AddProduct_HDH_Input}</arg>
+<arg>macOS</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-08T09:21:29.673191" elapsed="0.171069"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-08T09:21:29.846086" level="INFO">Typing text '8GB' into text field 'xpath=//input[@name='ram']'.</msg>
+<arg>${Web_AddProduct_Ram_Input}</arg>
+<arg>8GB</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-08T09:21:29.845074" elapsed="0.166914"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-08T09:21:30.013618" level="INFO">Typing text '13.6"' into text field 'xpath=//input[@name='manHinh']'.</msg>
+<arg>${Web_AddProduct_Screen_Input}</arg>
+<arg>13.6"</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-08T09:21:30.012744" elapsed="0.199621"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-08T09:21:30.214340" level="INFO">Typing text 'Apple M2' into text field 'xpath=//input[@name='cpu']'.</msg>
+<arg>${Web_AddProduct_CPU_Input}</arg>
+<arg>Apple M2</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-08T09:21:30.213148" elapsed="0.171335"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-08T09:21:30.387288" level="INFO">Typing text 'Card tích hợp - 8 nhân GPU' into text field 'xpath=//input[@name='thietKe']'.</msg>
+<arg>${Web_AddProduct_Design_Input}</arg>
+<arg>Card tích hợp - 8 nhân GPU</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-08T09:21:30.385804" elapsed="0.170528"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-08T09:21:30.558111" level="INFO">Typing text 'Sự đẳng cấp đến từ ngoại hình của chiếc MacBook Air nhà Apple là điều không thể phủ nhận và khó có dòng sản phẩm cùng phân khúc nào có thể qua mặt được.' into text field 'xpath=(//textarea[@name='thongTinChung'])[1]'.</msg>
+<arg>${Web_AddProduct_Infor_Input}</arg>
+<arg>Sự đẳng cấp đến từ ngoại hình của chiếc MacBook Air nhà Apple là điều không thể phủ nhận và khó có dòng sản phẩm cùng phân khúc nào có thể qua mặt được.</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-08T09:21:30.557142" elapsed="0.308528"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-08T09:21:30.867714" level="INFO">Typing text '18 giờ' into text field 'xpath=//input[@name='dungLuongPin']'.</msg>
+<arg>${Web_AddProduct_Pin_Input}</arg>
+<arg>18 giờ</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-08T09:21:30.866621" elapsed="0.130169"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-08T09:21:30.998902" level="INFO">Typing text '1 năm' into text field 'xpath=(//input[@name='thongTinBaoHanh'])[1]'.</msg>
+<arg>${Web_AddProduct_BaoHanh_Input}</arg>
+<arg>1 năm</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-08T09:21:30.997868" elapsed="0.175155"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-08T09:21:31.175135" level="INFO">Typing text '20' into text field 'xpath=(//input[@name='donViKho'])[1]'.</msg>
+<arg>${Web_AddProduct_Quality_Input}</arg>
+<arg>20</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-08T09:21:31.174033" elapsed="0.154609"/>
+</kw>
+<status status="PASS" start="2025-03-08T09:21:29.063303" elapsed="2.266238"/>
+</kw>
+<kw name="Upload Product Image">
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Uploading file from: ${image_path}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-03-08T09:21:31.333100" elapsed="0.002084"/>
+</kw>
+<kw name="Choose File" owner="SeleniumLibrary">
+<msg time="2025-03-08T09:21:31.337768" level="INFO">Sending C:\development\RobotFramework\Testing\project\Images\macbook-air-m2.jpg to browser.</msg>
+<arg>${Web_AddProduct_IMG_Upload}</arg>
+<arg>${image_path}</arg>
+<doc>Inputs the ``file_path`` into the file input field ``locator``.</doc>
+<status status="PASS" start="2025-03-08T09:21:31.336187" elapsed="0.188943"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-08T09:21:33.528363" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-08T09:21:31.526343" elapsed="2.003158"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-03-08T09:21:33.531616" level="INFO">"Image uploaded successfully."</msg>
+<arg>"Image uploaded successfully."</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-03-08T09:21:33.530598" elapsed="0.001694"/>
+</kw>
+<arg>${IMAGE_PATH}</arg>
+<status status="PASS" start="2025-03-08T09:21:31.331455" elapsed="2.201459"/>
+</kw>
+<kw name="Click &quot;Submit&quot; button">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-03-08T09:21:33.538331" level="INFO">Clicking element 'xpath=//input[@id='btnSubmit']'.</msg>
+<arg>${Web_AddProduct_Submit_Button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-08T09:21:33.536877" elapsed="0.353287"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-08T09:21:36.893712" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-08T09:21:33.891091" elapsed="3.003577"/>
+</kw>
+<status status="PASS" start="2025-03-08T09:21:33.535039" elapsed="3.360320"/>
+</kw>
+<kw name="Verify Product Upload Success">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-08T09:21:39.901390" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-08T09:21:36.899115" elapsed="3.003294"/>
+</kw>
+<kw name="Handle Alert" owner="SeleniumLibrary">
+<msg time="2025-03-08T09:21:39.904824" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<msg time="2025-03-08T09:21:39.934401" level="INFO">${alert_text} = Thêm thành công</msg>
+<var>${alert_text}</var>
+<arg>ACCEPT</arg>
+<doc>Handles the current alert and returns its message.</doc>
+<status status="PASS" start="2025-03-08T09:21:39.903597" elapsed="0.031656"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>"Alert message: ${alert_text}"</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-03-08T09:21:39.936193" elapsed="0.002469"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//table[@class='table table-hover sanPhamTable ']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-03-08T09:21:39.939849" elapsed="0.102120"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-08T09:21:42.044545" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-08T09:21:40.042758" elapsed="2.002826"/>
+</kw>
+<status status="PASS" start="2025-03-08T09:21:36.897589" elapsed="5.148719"/>
+</kw>
+<kw name="Verify product inlists">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-03-08T09:21:42.051489" level="INFO">Clicking element 'xpath=//select[@name='danhMucId']'.</msg>
+<arg>xpath=//select[@name='danhMucId']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-08T09:21:42.050207" elapsed="0.164328"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-03-08T09:21:42.216075" level="INFO">Clicking element 'xpath=(//option[@value='1'])[2]'.</msg>
+<arg>xpath=(//option[@value='1'])[2]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-08T09:21:42.215331" elapsed="0.071176"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-03-08T09:21:42.288029" level="INFO">Clicking element 'xpath=//select[@name='hangSXId']'.</msg>
+<arg>xpath=//select[@name='hangSXId']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-08T09:21:42.287266" elapsed="0.157096"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-03-08T09:21:42.446533" level="INFO">Clicking element 'xpath=(//option[text()='Apple'])[1]'.</msg>
+<arg>xpath=(//option[text()='Apple'])[1]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-08T09:21:42.445469" elapsed="0.071158"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-03-08T09:21:42.518975" level="INFO">Clicking element 'xpath=//select[@name='donGia']'.</msg>
+<arg>xpath=//select[@name='donGia']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-08T09:21:42.517816" elapsed="0.175933"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-03-08T09:21:42.695808" level="INFO">Clicking element 'xpath=//option[text()='Tất cả giá']'.</msg>
+<arg>xpath=//option[text()='Tất cả giá']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-08T09:21:42.694792" elapsed="0.074132"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-03-08T09:21:42.771070" level="INFO">Clicking element 'xpath=//select[@name='sapXepTheoGia']'.</msg>
+<arg>xpath=//select[@name='sapXepTheoGia']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-08T09:21:42.770060" elapsed="0.131748"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-03-08T09:21:42.903359" level="INFO">Clicking element 'xpath=//option[text()='Sắp xếp theo giá tăng dần']'.</msg>
+<arg>xpath=//option[text()='Sắp xếp theo giá tăng dần']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-08T09:21:42.902382" elapsed="0.050888"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-03-08T09:21:42.955014" level="INFO">Clicking element 'xpath=//button[@id='btnDuyetSanPham']'.</msg>
+<arg>xpath=//button[@id='btnDuyetSanPham']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-08T09:21:42.954165" elapsed="0.152116"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//table[@class='table table-hover sanPhamTable ']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-03-08T09:21:43.108198" elapsed="0.069242"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-08T09:21:48.180174" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-08T09:21:43.178624" elapsed="5.002564"/>
+</kw>
+<status status="PASS" start="2025-03-08T09:21:42.048513" elapsed="6.133402"/>
+</kw>
+<status status="PASS" start="2025-03-08T09:21:27.793427" elapsed="20.390444"/>
+</test>
+<test id="s1-t2" name="TC02_Upload Product without Images" line="26">
+<kw name="Navigate To Add Product Page" owner="keywords" type="SETUP">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-03-08T09:21:48.192414" level="INFO">Clicking element 'xpath=//a[@href='/laptopshop/admin/san-pham']'.</msg>
+<arg>${Web_AdminHomepage_Sanpham}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-08T09:21:48.191120" elapsed="0.347339"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Web_AddProduct_Title}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-03-08T09:21:48.539604" elapsed="0.084362"/>
+</kw>
+<status status="PASS" start="2025-03-08T09:21:48.189625" elapsed="0.435186"/>
+</kw>
+<kw name="Click &quot;Upload&quot; button">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-03-08T09:21:48.630952" level="INFO">Clicking element 'xpath=//select[@id='danhMucDropdown']'.</msg>
+<arg>${Web_AddProduct_Dropdown}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-08T09:21:48.629669" elapsed="0.159886"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-03-08T09:21:48.792493" level="INFO">Clicking element 'xpath=//option[text()='Laptop']'.</msg>
+<arg>${Web_AddProduct_Laptop_Option}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-08T09:21:48.790764" elapsed="0.096671"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Web_AddProduct_Popup}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-03-08T09:21:48.888199" elapsed="0.329922"/>
+</kw>
+<status status="PASS" start="2025-03-08T09:21:48.627847" elapsed="0.590939"/>
+</kw>
+<kw name="Upload Product Details">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-08T09:21:49.223203" level="INFO">Typing text 'Laptop Apple MacBook Air' into text field 'xpath=(//input[@name='tenSanPham'])[1]'.</msg>
+<arg>${Web_AddProduct_Name_Input}</arg>
+<arg>Laptop Apple MacBook Air</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-08T09:21:49.221769" elapsed="0.259691"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-08T09:21:49.482512" level="INFO">Typing text '21490000' into text field 'xpath=(//input[@name='donGia'])[1]'.</msg>
+<arg>${Web_AddProduct_Price_Input}</arg>
+<arg>21490000</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-08T09:21:49.481950" elapsed="0.185185"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-03-08T09:21:49.669929" level="INFO">Clicking element 'xpath=//select[@id='nhaSXId']'.</msg>
+<arg>${Web_AddProduct_HSX_Dropdown}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-08T09:21:49.668433" elapsed="0.115369"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-03-08T09:21:49.785477" level="INFO">Clicking element 'xpath=(//option[@value='2'])[4]'.</msg>
+<arg>${HangSanXuat}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-08T09:21:49.784573" elapsed="0.048883"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-08T09:21:49.835261" level="INFO">Typing text 'macOS' into text field 'xpath=//input[@name='heDieuHanh']'.</msg>
+<arg>${Web_AddProduct_HDH_Input}</arg>
+<arg>macOS</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-08T09:21:49.834267" elapsed="0.165417"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-08T09:21:50.001976" level="INFO">Typing text '8GB' into text field 'xpath=//input[@name='ram']'.</msg>
+<arg>${Web_AddProduct_Ram_Input}</arg>
+<arg>8GB</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-08T09:21:50.000693" elapsed="0.133129"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-08T09:21:50.136391" level="INFO">Typing text '13.6"' into text field 'xpath=//input[@name='manHinh']'.</msg>
+<arg>${Web_AddProduct_Screen_Input}</arg>
+<arg>13.6"</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-08T09:21:50.134985" elapsed="0.129419"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-08T09:21:50.266531" level="INFO">Typing text 'Apple M2' into text field 'xpath=//input[@name='cpu']'.</msg>
+<arg>${Web_AddProduct_CPU_Input}</arg>
+<arg>Apple M2</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-08T09:21:50.265129" elapsed="0.150759"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-08T09:21:50.417415" level="INFO">Typing text 'Card tích hợp - 8 nhân GPU' into text field 'xpath=//input[@name='thietKe']'.</msg>
+<arg>${Web_AddProduct_Design_Input}</arg>
+<arg>Card tích hợp - 8 nhân GPU</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-08T09:21:50.416634" elapsed="0.167698"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-08T09:21:50.586358" level="INFO">Typing text 'Sự đẳng cấp đến từ ngoại hình của chiếc MacBook Air nhà Apple là điều không thể phủ nhận và khó có dòng sản phẩm cùng phân khúc nào có thể qua mặt được.' into text field 'xpath=(//textarea[@name='thongTinChung'])[1]'.</msg>
+<arg>${Web_AddProduct_Infor_Input}</arg>
+<arg>Sự đẳng cấp đến từ ngoại hình của chiếc MacBook Air nhà Apple là điều không thể phủ nhận và khó có dòng sản phẩm cùng phân khúc nào có thể qua mặt được.</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-08T09:21:50.585309" elapsed="0.282777"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-08T09:21:50.870017" level="INFO">Typing text '18 giờ' into text field 'xpath=//input[@name='dungLuongPin']'.</msg>
+<arg>${Web_AddProduct_Pin_Input}</arg>
+<arg>18 giờ</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-08T09:21:50.868991" elapsed="0.145164"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-08T09:21:51.016578" level="INFO">Typing text '1 năm' into text field 'xpath=(//input[@name='thongTinBaoHanh'])[1]'.</msg>
+<arg>${Web_AddProduct_BaoHanh_Input}</arg>
+<arg>1 năm</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-08T09:21:51.015246" elapsed="0.142786"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-08T09:21:51.159790" level="INFO">Typing text '20' into text field 'xpath=(//input[@name='donViKho'])[1]'.</msg>
+<arg>${Web_AddProduct_Quality_Input}</arg>
+<arg>20</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-08T09:21:51.158774" elapsed="0.153087"/>
+</kw>
+<status status="PASS" start="2025-03-08T09:21:49.220195" elapsed="2.092490"/>
+</kw>
+<kw name="Click &quot;Submit&quot; button">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-03-08T09:21:51.317397" level="INFO">Clicking element 'xpath=//input[@id='btnSubmit']'.</msg>
+<arg>${Web_AddProduct_Submit_Button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-08T09:21:51.316066" elapsed="0.243921"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-08T09:21:54.563453" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-08T09:21:51.561261" elapsed="3.002764"/>
+</kw>
+<status status="PASS" start="2025-03-08T09:21:51.314519" elapsed="3.249902"/>
+</kw>
+<kw name="Verify error message">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<msg time="2025-03-08T09:21:54.782066" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-03-08T09:21:54.782448" level="FAIL">UnexpectedAlertPresentException: Alert Text: Thêm thành công
+Message: unexpected alert open: {Alert text : Thêm thành công}
+  (Session info: chrome=133.0.6943.142)
+Stacktrace:
+	GetHandleVerifier [0x00007FF684062EC5+28789]
+	(No symbol) [0x00007FF683FCF870]
+	(No symbol) [0x00007FF683E68F9A]
+	(No symbol) [0x00007FF683F102DB]
+	(No symbol) [0x00007FF683EE6FF3]
+	(No symbol) [0x00007FF683EAFF0E]
+	(No symbol) [0x00007FF683EB1193]
+	GetHandleVerifier [0x00007FF6843AD5FD+3479469]
+	GetHandleVerifier [0x00007FF6843C71A3+3584851]
+	GetHandleVerifier [0x00007FF6843BC44D+3540477]
+	GetHandleVerifier [0x00007FF684128B6A+838938]
+	(No symbol) [0x00007FF683FDA4EF]
+	(No symbol) [0x00007FF683FD6954]
+	(No symbol) [0x00007FF683FD6AF6]
+	(No symbol) [0x00007FF683FC6499]
+	BaseThreadInitThunk [0x00007FFA090C7374+20]
+	RtlUserThreadStart [0x00007FFA0AABCC91+33]
+</msg>
+<arg>${error_message}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="FAIL" start="2025-03-08T09:21:54.565952" elapsed="0.224090">UnexpectedAlertPresentException: Alert Text: Thêm thành công
+Message: unexpected alert open: {Alert text : Thêm thành công}
+  (Session info: chrome=133.0.6943.142)
+Stacktrace:
+	GetHandleVerifier [0x00007FF684062EC5+28789]
+	(No symbol) [0x00007FF683FCF870]
+	(No symbol) [0x00007FF683E68F9A]
+	(No symbol) [0x00007FF683F102DB]
+	(No symbol) [0x00007FF683EE6FF3]
+	(No symbol) [0x00007FF683EAFF0E]
+	(No symbol) [0x00007FF683EB1193]
+	GetHandleVerifier [0x00007FF6843AD5FD+3479469]
+	GetHandleVerifier [0x00007FF6843C71A3+3584851]
+	GetHandleVerifier [0x00007FF6843BC44D+3540477]
+	GetHandleVerifier [0x00007FF684128B6A+838938]
+	(No symbol) [0x00007FF683FDA4EF]
+	(No symbol) [0x00007FF683FD6954]
+	(No symbol) [0x00007FF683FD6AF6]
+	(No symbol) [0x00007FF683FC6499]
+	BaseThreadInitThunk [0x00007FFA090C7374+20]
+	RtlUserThreadStart [0x00007FFA0AABCC91+33]
+</status>
+</kw>
+<status status="FAIL" start="2025-03-08T09:21:54.565369" elapsed="0.225129">UnexpectedAlertPresentException: Alert Text: Thêm thành công
+Message: unexpected alert open: {Alert text : Thêm thành công}
+  (Session info: chrome=133.0.6943.142)
+Stacktrace:
+	GetHandleVerifier [0x00007FF684062EC5+28789]
+	(No symbol) [0x00007FF683FCF870]
+	(No symbol) [0x00007FF683E68F9A]
+	(No symbol) [0x00007FF683F102DB]
+	(No symbol) [0x00007FF683EE6FF3]
+	(No symbol) [0x00007FF683EAFF0E]
+	(No symbol) [0x00007FF683EB1193]
+	GetHandleVerifier [0x00007FF6843AD5FD+3479469]
+	GetHandleVerifier [0x00007FF6843C71A3+3584851]
+	GetHandleVerifier [0x00007FF6843BC44D+3540477]
+	GetHandleVerifier [0x00007FF684128B6A+838938]
+	(No symbol) [0x00007FF683FDA4EF]
+	(No symbol) [0x00007FF683FD6954]
+	(No symbol) [0x00007FF683FD6AF6]
+	(No symbol) [0x00007FF683FC6499]
+	BaseThreadInitThunk [0x00007FFA090C7374+20]
+	RtlUserThreadStart [0x00007FFA0AABCC91+33]
+</status>
+</kw>
+<status status="FAIL" start="2025-03-08T09:21:48.187302" elapsed="6.604722">UnexpectedAlertPresentException: Alert Text: Thêm thành công
+Message: unexpected alert open: {Alert text : Thêm thành công}
+  (Session info: chrome=133.0.6943.142)
+Stacktrace:
+	GetHandleVerifier [0x00007FF684062EC5+28789]
+	(No symbol) [0x00007FF683FCF870]
+	(No symbol) [0x00007FF683E68F9A]
+	(No symbol) [0x00007FF683F102DB]
+	(No symbol) [0x00007FF683EE6FF3]
+	(No symbol) [0x00007FF683EAFF0E]
+	(No symbol) [0x00007FF683EB1193]
+	GetHandleVerifier [0x00007FF6843AD5FD+3479469]
+	GetHandleVerifier [0x00007FF6843C71A3+3584851]
+	GetHandleVerifier [0x00007FF6843BC44D+3540477]
+	GetHandleVerifier [0x00007FF684128B6A+838938]
+	(No symbol) [0x00007FF683FDA4EF]
+	(No symbol) [0x00007FF683FD6954]
+	(No symbol) [0x00007FF683FD6AF6]
+	(No symbol) [0x00007FF683FC6499]
+	BaseThreadInitThunk [0x00007FFA090C7374+20]
+	RtlUserThreadStart [0x00007FFA0AABCC91+33]
+</status>
+</test>
+<test id="s1-t3" name="TC03_Upload Product with Missing Fields" line="31">
+<kw name="Navigate To Add Product Page" owner="keywords" type="SETUP">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-03-08T09:21:54.797498" level="INFO">Clicking element 'xpath=//a[@href='/laptopshop/admin/san-pham']'.</msg>
+<arg>${Web_AdminHomepage_Sanpham}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-08T09:21:54.797235" elapsed="0.155692"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Web_AddProduct_Title}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-03-08T09:21:54.953794" elapsed="0.052813"/>
+</kw>
+<status status="PASS" start="2025-03-08T09:21:54.796648" elapsed="0.211475"/>
+</kw>
+<kw name="Click &quot;Upload&quot; button">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-03-08T09:21:55.014093" level="INFO">Clicking element 'xpath=//select[@id='danhMucDropdown']'.</msg>
+<arg>${Web_AddProduct_Dropdown}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-08T09:21:55.012501" elapsed="0.126764"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-03-08T09:21:55.141391" level="INFO">Clicking element 'xpath=//option[text()='Laptop']'.</msg>
+<arg>${Web_AddProduct_Laptop_Option}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-08T09:21:55.139872" elapsed="0.071248"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Web_AddProduct_Popup}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-03-08T09:21:55.212358" elapsed="0.338032"/>
+</kw>
+<status status="PASS" start="2025-03-08T09:21:55.010312" elapsed="0.540933"/>
+</kw>
+<kw name="Upload Product with missing fields">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-08T09:21:55.565826" level="INFO">Typing text 'Laptop Apple MacBook Air' into text field 'xpath=(//input[@name='tenSanPham'])[1]'.</msg>
+<arg>${Web_AddProduct_Name_Input}</arg>
+<arg>Laptop Apple MacBook Air</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-08T09:21:55.564677" elapsed="0.256811"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-08T09:21:55.823517" level="INFO">Typing text '21490000' into text field 'xpath=(//input[@name='donGia'])[1]'.</msg>
+<arg>${Web_AddProduct_Price_Input}</arg>
+<arg>21490000</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-08T09:21:55.822371" elapsed="0.212039"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-03-08T09:21:56.036364" level="INFO">Clicking element 'xpath=//select[@id='nhaSXId']'.</msg>
+<arg>${Web_AddProduct_HSX_Dropdown}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-08T09:21:56.035288" elapsed="0.147465"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-03-08T09:21:56.184408" level="INFO">Clicking element 'xpath=(//option[@value='2'])[4]'.</msg>
+<arg>${HangSanXuat}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-08T09:21:56.183584" elapsed="0.070767"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-08T09:21:56.257065" level="INFO">Typing text 'macOS' into text field 'xpath=//input[@name='heDieuHanh']'.</msg>
+<arg>${Web_AddProduct_HDH_Input}</arg>
+<arg>macOS</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-08T09:21:56.255472" elapsed="0.176977"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-08T09:21:56.435092" level="INFO">Typing text '8GB' into text field 'xpath=//input[@name='ram']'.</msg>
+<arg>${Web_AddProduct_Ram_Input}</arg>
+<arg>8GB</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-08T09:21:56.433319" elapsed="0.152731"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-08T09:21:56.587037" level="INFO">Typing text '13.6"' into text field 'xpath=//input[@name='manHinh']'.</msg>
+<arg>${Web_AddProduct_Screen_Input}</arg>
+<arg>13.6"</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-08T09:21:56.586538" elapsed="0.107552"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-08T09:21:56.695772" level="INFO">Typing text 'Apple M2' into text field 'xpath=//input[@name='cpu']'.</msg>
+<arg>${Web_AddProduct_CPU_Input}</arg>
+<arg>Apple M2</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-08T09:21:56.694873" elapsed="0.186009"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-08T09:21:56.883266" level="INFO">Typing text 'Card tích hợp - 8 nhân GPU' into text field 'xpath=//input[@name='thietKe']'.</msg>
+<arg>${Web_AddProduct_Design_Input}</arg>
+<arg>Card tích hợp - 8 nhân GPU</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-08T09:21:56.881913" elapsed="0.188419"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-08T09:21:57.072797" level="INFO">Typing text 'Sự đẳng cấp đến từ ngoại hình của chiếc MacBook Air nhà Apple là điều không thể phủ nhận và khó có dòng sản phẩm cùng phân khúc nào có thể qua mặt được.' into text field 'xpath=(//textarea[@name='thongTinChung'])[1]'.</msg>
+<arg>${Web_AddProduct_Infor_Input}</arg>
+<arg>Sự đẳng cấp đến từ ngoại hình của chiếc MacBook Air nhà Apple là điều không thể phủ nhận và khó có dòng sản phẩm cùng phân khúc nào có thể qua mặt được.</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-08T09:21:57.071551" elapsed="0.270180"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-08T09:21:57.343397" level="INFO">Typing text '1 năm' into text field 'xpath=(//input[@name='thongTinBaoHanh'])[1]'.</msg>
+<arg>${Web_AddProduct_BaoHanh_Input}</arg>
+<arg>1 năm</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-08T09:21:57.342421" elapsed="0.126501"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-08T09:21:57.471157" level="INFO">Typing text '20' into text field 'xpath=(//input[@name='donViKho'])[1]'.</msg>
+<arg>${Web_AddProduct_Quality_Input}</arg>
+<arg>20</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-08T09:21:57.470039" elapsed="0.188164"/>
+</kw>
+<status status="PASS" start="2025-03-08T09:21:55.556301" elapsed="2.102739"/>
+</kw>
+<kw name="Click &quot;Submit&quot; button">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-03-08T09:21:57.663345" level="INFO">Clicking element 'xpath=//input[@id='btnSubmit']'.</msg>
+<arg>${Web_AddProduct_Submit_Button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-08T09:21:57.662328" elapsed="0.204379"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-08T09:22:00.869493" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-08T09:21:57.868073" elapsed="3.002303"/>
+</kw>
+<status status="PASS" start="2025-03-08T09:21:57.660940" elapsed="3.210031"/>
+</kw>
+<kw name="Verify error message displayed">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//span[text()='Dung lượng pin được trống']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-03-08T09:22:00.874710" elapsed="0.052041"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-03-08T09:22:00.930074" level="INFO">Clicking element 'xpath=(//button[text()='Hủy'])[1]'.</msg>
+<arg>xpath=(//button[text()='Hủy'])[1]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-08T09:22:00.928964" elapsed="0.177541"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Web_AddProduct_Title}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-03-08T09:22:01.107920" elapsed="0.092867"/>
+</kw>
+<status status="PASS" start="2025-03-08T09:22:00.873089" elapsed="0.328567"/>
+</kw>
+<status status="PASS" start="2025-03-08T09:21:54.795969" elapsed="6.407489"/>
+</test>
+<test id="s1-t4" name="TC04_Update Product Name" line="36">
+<kw name="Navigate To Add Product Page" owner="keywords" type="SETUP">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-03-08T09:22:01.214739" level="INFO">Clicking element 'xpath=//a[@href='/laptopshop/admin/san-pham']'.</msg>
+<arg>${Web_AdminHomepage_Sanpham}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-08T09:22:01.211976" elapsed="0.406504"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Web_AddProduct_Title}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-03-08T09:22:01.619471" elapsed="0.062532"/>
+</kw>
+<status status="PASS" start="2025-03-08T09:22:01.208941" elapsed="0.473770"/>
+</kw>
+<kw name="Click &quot;Update&quot; button">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-03-08T09:22:01.687483" level="INFO">Clicking element 'xpath=(//button[text()='Cập nhật'])[1]'.</msg>
+<arg>xpath=(//button[text()='Cập nhật'])[1]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-08T09:22:01.686376" elapsed="0.201999"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//label[text()='Dung lượng Pin']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-03-08T09:22:01.889059" elapsed="0.294846"/>
+</kw>
+<kw name="Clear Element Text" owner="SeleniumLibrary">
+<arg>${Web_AddProduct_Pin_Input}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-08T09:22:02.184963" elapsed="0.115534"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-08T09:22:02.301706" level="INFO">Typing text '20 gio' into text field 'xpath=//input[@name='dungLuongPin']'.</msg>
+<arg>${Web_AddProduct_Pin_Input}</arg>
+<arg>20 gio</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-08T09:22:02.301075" elapsed="0.181512"/>
+</kw>
+<status status="PASS" start="2025-03-08T09:22:01.684695" elapsed="0.798673"/>
+</kw>
+<kw name="Click &quot;Submit&quot; button">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-03-08T09:22:02.488361" level="INFO">Clicking element 'xpath=//input[@id='btnSubmit']'.</msg>
+<arg>${Web_AddProduct_Submit_Button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-08T09:22:02.487084" elapsed="0.236880"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-08T09:22:05.726347" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-08T09:22:02.724944" elapsed="3.002418"/>
+</kw>
+<status status="PASS" start="2025-03-08T09:22:02.485467" elapsed="3.242443"/>
+</kw>
+<kw name="Verify Product Upload Success">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-08T09:22:08.732723" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-08T09:22:05.731530" elapsed="3.001917"/>
+</kw>
+<kw name="Handle Alert" owner="SeleniumLibrary">
+<msg time="2025-03-08T09:22:08.734767" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<msg time="2025-03-08T09:22:08.752007" level="INFO">${alert_text} = Cập nhật thành công</msg>
+<var>${alert_text}</var>
+<arg>ACCEPT</arg>
+<doc>Handles the current alert and returns its message.</doc>
+<status status="PASS" start="2025-03-08T09:22:08.734120" elapsed="0.018977"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>"Alert message: ${alert_text}"</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-03-08T09:22:08.754266" elapsed="0.004439"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//table[@class='table table-hover sanPhamTable ']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-03-08T09:22:08.759773" elapsed="0.283899"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-08T09:22:11.045873" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-08T09:22:09.044753" elapsed="2.002066"/>
+</kw>
+<status status="PASS" start="2025-03-08T09:22:05.730043" elapsed="5.317451"/>
+</kw>
+<status status="PASS" start="2025-03-08T09:22:01.206818" elapsed="9.842571"/>
+</test>
+<test id="s1-t5" name="TC05_Update Without Any Change" line="40">
+<kw name="Navigate To Add Product Page" owner="keywords" type="SETUP">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-03-08T09:22:11.058514" level="INFO">Clicking element 'xpath=//a[@href='/laptopshop/admin/san-pham']'.</msg>
+<arg>${Web_AdminHomepage_Sanpham}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-08T09:22:11.057473" elapsed="0.209034"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Web_AddProduct_Title}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-03-08T09:22:11.267086" elapsed="0.053723"/>
+</kw>
+<status status="PASS" start="2025-03-08T09:22:11.055865" elapsed="0.266254"/>
+</kw>
+<kw name="Click &quot;Update&quot; button without any change">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-03-08T09:22:11.327923" level="INFO">Clicking element 'xpath=(//button[text()='Cập nhật'])[1]'.</msg>
+<arg>xpath=(//button[text()='Cập nhật'])[1]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-08T09:22:11.326755" elapsed="0.126940"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//label[text()='Dung lượng Pin']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-03-08T09:22:11.454846" elapsed="0.299260"/>
+</kw>
+<status status="PASS" start="2025-03-08T09:22:11.324038" elapsed="0.430922"/>
+</kw>
+<kw name="Click &quot;Submit&quot; button">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-03-08T09:22:11.764192" level="INFO">Clicking element 'xpath=//input[@id='btnSubmit']'.</msg>
+<arg>${Web_AddProduct_Submit_Button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-08T09:22:11.761943" elapsed="0.294731"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-08T09:22:15.061452" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-08T09:22:12.057628" elapsed="3.004761"/>
+</kw>
+<status status="PASS" start="2025-03-08T09:22:11.757698" elapsed="3.305311"/>
+</kw>
+<status status="PASS" start="2025-03-08T09:22:11.053514" elapsed="4.011158"/>
+</test>
+<test id="s1-t6" name="TC06_Delete Product" line="43">
+<kw name="Navigate To Add Product Page" owner="keywords" type="SETUP">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-03-08T09:22:15.072426" level="INFO">Clicking element 'xpath=//a[@href='/laptopshop/admin/san-pham']'.</msg>
+<msg time="2025-03-08T09:22:15.356172" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-03-08T09:22:15.357548" level="FAIL">UnexpectedAlertPresentException: Alert Text: Cập nhật thành công
+Message: unexpected alert open: {Alert text : Cập nhật thành công}
+  (Session info: chrome=133.0.6943.142)
+Stacktrace:
+	GetHandleVerifier [0x00007FF684062EC5+28789]
+	(No symbol) [0x00007FF683FCF870]
+	(No symbol) [0x00007FF683E68F9A]
+	(No symbol) [0x00007FF683F102DB]
+	(No symbol) [0x00007FF683EE6FF3]
+	(No symbol) [0x00007FF683EAFF0E]
+	(No symbol) [0x00007FF683EB1193]
+	GetHandleVerifier [0x00007FF6843AD5FD+3479469]
+	GetHandleVerifier [0x00007FF6843C71A3+3584851]
+	GetHandleVerifier [0x00007FF6843BC44D+3540477]
+	GetHandleVerifier [0x00007FF684128B6A+838938]
+	(No symbol) [0x00007FF683FDA4EF]
+	(No symbol) [0x00007FF683FD6954]
+	(No symbol) [0x00007FF683FD6AF6]
+	(No symbol) [0x00007FF683FC6499]
+	BaseThreadInitThunk [0x00007FFA090C7374+20]
+	RtlUserThreadStart [0x00007FFA0AABCC91+33]
+</msg>
+<arg>${Web_AdminHomepage_Sanpham}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="FAIL" start="2025-03-08T09:22:15.071467" elapsed="0.308300">UnexpectedAlertPresentException: Alert Text: Cập nhật thành công
+Message: unexpected alert open: {Alert text : Cập nhật thành công}
+  (Session info: chrome=133.0.6943.142)
+Stacktrace:
+	GetHandleVerifier [0x00007FF684062EC5+28789]
+	(No symbol) [0x00007FF683FCF870]
+	(No symbol) [0x00007FF683E68F9A]
+	(No symbol) [0x00007FF683F102DB]
+	(No symbol) [0x00007FF683EE6FF3]
+	(No symbol) [0x00007FF683EAFF0E]
+	(No symbol) [0x00007FF683EB1193]
+	GetHandleVerifier [0x00007FF6843AD5FD+3479469]
+	GetHandleVerifier [0x00007FF6843C71A3+3584851]
+	GetHandleVerifier [0x00007FF6843BC44D+3540477]
+	GetHandleVerifier [0x00007FF684128B6A+838938]
+	(No symbol) [0x00007FF683FDA4EF]
+	(No symbol) [0x00007FF683FD6954]
+	(No symbol) [0x00007FF683FD6AF6]
+	(No symbol) [0x00007FF683FC6499]
+	BaseThreadInitThunk [0x00007FFA090C7374+20]
+	RtlUserThreadStart [0x00007FFA0AABCC91+33]
+</status>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Web_AddProduct_Title}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2025-03-08T09:22:15.380814" elapsed="0.000411"/>
+</kw>
+<status status="FAIL" start="2025-03-08T09:22:15.070141" elapsed="0.311727">UnexpectedAlertPresentException: Alert Text: Cập nhật thành công
+Message: unexpected alert open: {Alert text : Cập nhật thành công}
+  (Session info: chrome=133.0.6943.142)
+Stacktrace:
+	GetHandleVerifier [0x00007FF684062EC5+28789]
+	(No symbol) [0x00007FF683FCF870]
+	(No symbol) [0x00007FF683E68F9A]
+	(No symbol) [0x00007FF683F102DB]
+	(No symbol) [0x00007FF683EE6FF3]
+	(No symbol) [0x00007FF683EAFF0E]
+	(No symbol) [0x00007FF683EB1193]
+	GetHandleVerifier [0x00007FF6843AD5FD+3479469]
+	GetHandleVerifier [0x00007FF6843C71A3+3584851]
+	GetHandleVerifier [0x00007FF6843BC44D+3540477]
+	GetHandleVerifier [0x00007FF684128B6A+838938]
+	(No symbol) [0x00007FF683FDA4EF]
+	(No symbol) [0x00007FF683FD6954]
+	(No symbol) [0x00007FF683FD6AF6]
+	(No symbol) [0x00007FF683FC6499]
+	BaseThreadInitThunk [0x00007FFA090C7374+20]
+	RtlUserThreadStart [0x00007FFA0AABCC91+33]
+</status>
+</kw>
+<status status="FAIL" start="2025-03-08T09:22:15.067933" elapsed="0.315908">Setup failed:
+UnexpectedAlertPresentException: Alert Text: Cập nhật thành công
+Message: unexpected alert open: {Alert text : Cập nhật thành công}
+  (Session info: chrome=133.0.6943.142)
+Stacktrace:
+	GetHandleVerifier [0x00007FF684062EC5+28789]
+	(No symbol) [0x00007FF683FCF870]
+	(No symbol) [0x00007FF683E68F9A]
+	(No symbol) [0x00007FF683F102DB]
+	(No symbol) [0x00007FF683EE6FF3]
+	(No symbol) [0x00007FF683EAFF0E]
+	(No symbol) [0x00007FF683EB1193]
+	GetHandleVerifier [0x00007FF6843AD5FD+3479469]
+	GetHandleVerifier [0x00007FF6843C71A3+3584851]
+	GetHandleVerifier [0x00007FF6843BC44D+3540477]
+	GetHandleVerifier [0x00007FF684128B6A+838938]
+	(No symbol) [0x00007FF683FDA4EF]
+	(No symbol) [0x00007FF683FD6954]
+	(No symbol) [0x00007FF683FD6AF6]
+	(No symbol) [0x00007FF683FC6499]
+	BaseThreadInitThunk [0x00007FFA090C7374+20]
+	RtlUserThreadStart [0x00007FFA0AABCC91+33]
+</status>
+</test>
+<test id="s1-t7" name="TC07_Search Product by Category" line="46">
+<kw name="Navigate To Add Product Page" owner="keywords" type="SETUP">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-03-08T09:22:15.403323" level="INFO">Clicking element 'xpath=//a[@href='/laptopshop/admin/san-pham']'.</msg>
+<arg>${Web_AdminHomepage_Sanpham}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-08T09:22:15.402076" elapsed="0.203473"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Web_AddProduct_Title}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-03-08T09:22:15.608051" elapsed="0.054660"/>
+</kw>
+<status status="PASS" start="2025-03-08T09:22:15.400519" elapsed="0.263044"/>
+</kw>
+<kw name="Verify product inlists">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-03-08T09:22:15.668310" level="INFO">Clicking element 'xpath=//select[@name='danhMucId']'.</msg>
+<arg>xpath=//select[@name='danhMucId']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-08T09:22:15.667248" elapsed="0.129578"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-03-08T09:22:15.798290" level="INFO">Clicking element 'xpath=(//option[@value='1'])[2]'.</msg>
+<arg>xpath=(//option[@value='1'])[2]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-08T09:22:15.797448" elapsed="0.073005"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-03-08T09:22:15.872010" level="INFO">Clicking element 'xpath=//select[@name='hangSXId']'.</msg>
+<arg>xpath=//select[@name='hangSXId']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-08T09:22:15.871208" elapsed="0.201443"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-03-08T09:22:16.075857" level="INFO">Clicking element 'xpath=(//option[text()='Apple'])[1]'.</msg>
+<arg>xpath=(//option[text()='Apple'])[1]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-08T09:22:16.073864" elapsed="0.078780"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-03-08T09:22:16.154985" level="INFO">Clicking element 'xpath=//select[@name='donGia']'.</msg>
+<arg>xpath=//select[@name='donGia']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-08T09:22:16.153903" elapsed="0.315396"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-03-08T09:22:16.471652" level="INFO">Clicking element 'xpath=//option[text()='Tất cả giá']'.</msg>
+<arg>xpath=//option[text()='Tất cả giá']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-08T09:22:16.470414" elapsed="0.079096"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-03-08T09:22:16.551352" level="INFO">Clicking element 'xpath=//select[@name='sapXepTheoGia']'.</msg>
+<arg>xpath=//select[@name='sapXepTheoGia']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-08T09:22:16.550462" elapsed="0.117788"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-03-08T09:22:16.669971" level="INFO">Clicking element 'xpath=//option[text()='Sắp xếp theo giá tăng dần']'.</msg>
+<arg>xpath=//option[text()='Sắp xếp theo giá tăng dần']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-08T09:22:16.668796" elapsed="0.044478"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-03-08T09:22:16.715168" level="INFO">Clicking element 'xpath=//button[@id='btnDuyetSanPham']'.</msg>
+<arg>xpath=//button[@id='btnDuyetSanPham']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-08T09:22:16.714365" elapsed="0.171090"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//table[@class='table table-hover sanPhamTable ']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-03-08T09:22:16.887022" elapsed="0.069841"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-08T09:22:21.959308" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-08T09:22:16.957835" elapsed="5.002400"/>
+</kw>
+<status status="PASS" start="2025-03-08T09:22:15.665577" elapsed="6.295355"/>
+</kw>
+<status status="PASS" start="2025-03-08T09:22:15.398279" elapsed="6.564615"/>
+</test>
+<test id="s1-t8" name="TC08_Search Product by Code" line="48">
+<kw name="Navigate To Add Product Page" owner="keywords" type="SETUP">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-03-08T09:22:21.972378" level="INFO">Clicking element 'xpath=//a[@href='/laptopshop/admin/san-pham']'.</msg>
+<arg>${Web_AdminHomepage_Sanpham}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-08T09:22:21.971143" elapsed="0.235412"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Web_AddProduct_Title}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-03-08T09:22:22.207626" elapsed="0.076085"/>
+</kw>
+<status status="PASS" start="2025-03-08T09:22:21.969471" elapsed="0.315109"/>
+</kw>
+<kw name="Search product">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-03-08T09:22:22.288767" level="INFO">Clicking element 'xpath=//input[@id='searchById']'.</msg>
+<arg>xpath=//input[@id='searchById']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-08T09:22:22.287648" elapsed="0.152189"/>
+</kw>
+<status status="PASS" start="2025-03-08T09:22:22.286113" elapsed="0.154370"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-08T09:22:22.444537" level="INFO">Typing text '11' into text field 'xpath=//input[@id='searchById']'.</msg>
+<arg>${AddProduct_Input}</arg>
+<arg>${valid_code}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-08T09:22:22.443116" elapsed="0.138911"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-08T09:22:24.585922" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-08T09:22:22.583804" elapsed="2.003074"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${search_result}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-03-08T09:22:24.589434" elapsed="0.048190"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-08T09:22:28.641060" level="INFO">Slept 4 seconds.</msg>
+<arg>4s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-08T09:22:24.639821" elapsed="4.002082"/>
+</kw>
+<status status="PASS" start="2025-03-08T09:22:21.967160" elapsed="6.676834"/>
+</test>
+<test id="s1-t9" name="TC09_Search Non-existent Product" line="54">
+<kw name="Navigate To Add Product Page" owner="keywords" type="SETUP">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-03-08T09:22:28.654941" level="INFO">Clicking element 'xpath=//a[@href='/laptopshop/admin/san-pham']'.</msg>
+<arg>${Web_AdminHomepage_Sanpham}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-08T09:22:28.653580" elapsed="0.271925"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Web_AddProduct_Title}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-03-08T09:22:28.926429" elapsed="0.058632"/>
+</kw>
+<status status="PASS" start="2025-03-08T09:22:28.651551" elapsed="0.334282"/>
+</kw>
+<kw name="Search product">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-03-08T09:22:28.989765" level="INFO">Clicking element 'xpath=//input[@id='searchById']'.</msg>
+<arg>xpath=//input[@id='searchById']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-08T09:22:28.988724" elapsed="0.143455"/>
+</kw>
+<status status="PASS" start="2025-03-08T09:22:28.987620" elapsed="0.145295"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-08T09:22:29.136105" level="INFO">Typing text 'dell' into text field 'xpath=//input[@id='searchById']'.</msg>
+<arg>${AddProduct_Input}</arg>
+<arg>${invalid_code}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-08T09:22:29.134684" elapsed="0.167458"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<msg time="2025-03-08T09:22:34.534182" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-03-08T09:22:34.535226" level="FAIL">Element '' not visible after 5 seconds.</msg>
+<arg>${Search_invalid_result}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="FAIL" start="2025-03-08T09:22:29.304160" elapsed="5.236638">Element '' not visible after 5 seconds.</status>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2025-03-08T09:22:34.542923" elapsed="0.000463"/>
+</kw>
+<status status="FAIL" start="2025-03-08T09:22:28.648953" elapsed="5.896145">Element '' not visible after 5 seconds.</status>
+</test>
+<test id="s1-t10" name="TC10_View Product Details" line="59">
+<kw name="Navigate To Add Product Page" owner="keywords" type="SETUP">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-03-08T09:22:34.553658" level="INFO">Clicking element 'xpath=//a[@href='/laptopshop/admin/san-pham']'.</msg>
+<arg>${Web_AdminHomepage_Sanpham}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-08T09:22:34.552783" elapsed="0.377065"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Web_AddProduct_Title}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-03-08T09:22:34.931588" elapsed="0.062797"/>
+</kw>
+<status status="PASS" start="2025-03-08T09:22:34.551623" elapsed="0.443275"/>
+</kw>
+<kw name="click &quot;Details&quot; button">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-03-08T09:22:34.997900" level="INFO">Clicking element 'xpath=(//button[@class='btn btn-warning btnChiTiet'])[1]'.</msg>
+<arg>xpath=(//button[@class='btn btn-warning btnChiTiet'])[1]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-08T09:22:34.997100" elapsed="0.157683"/>
+</kw>
+<status status="PASS" start="2025-03-08T09:22:34.996064" elapsed="0.159455"/>
+</kw>
+<kw name="Product details page displayed">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//h3[text()='Chi tiết sản phẩm']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-03-08T09:22:35.160070" elapsed="0.308292"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-08T09:22:40.471456" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-08T09:22:35.469604" elapsed="5.002794"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-03-08T09:22:40.474435" level="INFO">Clicking element 'xpath=//button[text()='Đóng']'.</msg>
+<arg>xpath=//button[text()='Đóng']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-08T09:22:40.473337" elapsed="0.111682"/>
+</kw>
+<status status="PASS" start="2025-03-08T09:22:35.157631" elapsed="5.428364"/>
+</kw>
+<status status="PASS" start="2025-03-08T09:22:34.549735" elapsed="6.038184"/>
+</test>
+<kw name="Close All Browsers" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2025-03-08T09:22:40.591670" elapsed="2.433968"/>
+</kw>
+<doc>Test login with valid credentials</doc>
+<status status="FAIL" start="2025-03-08T09:20:56.179738" elapsed="106.846359"/>
+</suite>
+<statistics>
+<total>
+<stat pass="7" fail="3" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="7" fail="3" skip="0" id="s1" name="TS07 ProductManagement">TS07 ProductManagement</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
